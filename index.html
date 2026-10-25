@@ -86,13 +86,19 @@
         <h2>Données collectées</h2>
         <ul>
           <li>
-            <strong>Modèles de réponse.</strong> Le nom, le raccourci et le texte de chaque modèle. Ils servent uniquement à les réinsérer plus tard.
+            <strong>Modèles de réponse.</strong> Le nom, le raccourci et le contenu (texte ou HTML) de chaque modèle. Ils servent uniquement à les réinsérer plus tard.
+          </li>
+          <li>
+            <strong>Variables personnalisées.</strong> Le nom et le texte que vous définissez. Ils sont insérés dans un modèle uniquement lorsque vous les utilisez.
+          </li>
+          <li>
+            <strong>Brouillon d’édition.</strong> Le formulaire de modèle en cours, pour éviter une perte si le popup se ferme par accident.
           </li>
           <li>
             <strong>Langue du popup.</strong> Français ou anglais, selon votre choix.
           </li>
           <li>
-            <strong>Nom affiché du destinataire.</strong> Lu dans le message ouvert, seulement pour remplacer <code>{{first_name}}</code>. Il n’est pas enregistré et n’est pas transmis.
+            <strong>Nom affiché du destinataire.</strong> Lu dans le message ouvert, seulement pour remplacer les variables de prénom (<code>{{prénom}}</code> / <code>{{first_name}}</code>). Il n’est pas enregistré et n’est pas transmis. La date du jour est calculée localement et n’est pas stockée.
           </li>
           <li>
             <strong>Licence.</strong> Si vous payez ou vous connectez, un identifiant d’installation, votre courriel de compte ExtensionPay et le statut d’abonnement (payé, essai, date) sont échangés avec extensionpay.com pour savoir si Premium est actif.
@@ -100,12 +106,12 @@
         </ul>
         <p>
           Ne sont pas collectés : le contenu de la boîte de réception, les messages reçus, les pièces jointes, l’historique de navigation, la position, des données de santé, ni des données utilisées pour la publicité ou le crédit.
-          Le corps du message en cours d’écriture n’est pas envoyé à un serveur. Le paiement par carte est saisi sur le site d’ExtensionPay, pas dans l’extension.
+          Le corps du message en cours d’écriture n’est pas envoyé à un serveur. Un export JSON ou HTML que vous téléchargez reste sur votre appareil. Le paiement par carte est saisi sur le site d’ExtensionPay, pas dans l’extension.
         </p>
 
         <h2>Où ces données sont stockées</h2>
         <p>
-          Les modèles, la langue et la copie locale de la licence restent dans le stockage local du navigateur, sur cet appareil.
+          Les modèles, variables, brouillon, langue et la copie locale de la licence restent dans le stockage local du navigateur, sur cet appareil.
           Ils ne sont pas synchronisés via le compte Google. Ils ne sont pas envoyés à un serveur que nous opérons. Nous n’avons pas de serveur pour cette extension.
         </p>
 
@@ -124,9 +130,9 @@
 
         <h2>Durée et suppression</h2>
         <p>
-          Les modèles restent jusqu’à ce que vous les supprimiez dans le popup, ou jusqu’à la désinstallation de l’extension.
-          Désinstaller l’extension efface les modèles et la langue enregistrés localement.
-          Pour le compte ExtensionPay, la suppression se fait auprès d’ExtensionPay.
+          Les modèles, variables et brouillons restent jusqu’à ce que vous les supprimiez dans le popup (élément par élément, ou via Confidentialité → suppression de toutes les données locales), ou jusqu’à la désinstallation de l’extension.
+          Désinstaller l’extension efface ces données locales, ainsi que la langue enregistrée.
+          La suppression locale n’annule pas un abonnement ExtensionPay. Pour le compte ExtensionPay, la suppression se fait auprès d’ExtensionPay.
         </p>
 
         <h2>Modifications</h2>
@@ -154,13 +160,19 @@
         <h2>Data we collect</h2>
         <ul>
           <li>
-            <strong>Reply templates.</strong> The name, shortcut, and body of each template. Used only to insert them again later.
+            <strong>Reply templates.</strong> The name, shortcut, and body (plain text or HTML) of each template. Used only to insert them again later.
+          </li>
+          <li>
+            <strong>Custom variables.</strong> The name and text you define. Inserted into a template only when you use them.
+          </li>
+          <li>
+            <strong>Editor draft.</strong> The in-progress template form, so accidental popup closes do not lose your work.
           </li>
           <li>
             <strong>Popup language.</strong> French or English, whichever you select.
           </li>
           <li>
-            <strong>Recipient display name.</strong> Read from the message you are writing, only to replace <code>{{first_name}}</code>. It is not stored and it is not transmitted.
+            <strong>Recipient display name.</strong> Read from the message you are writing, only to replace first-name variables (<code>{{first_name}}</code> / <code>{{prénom}}</code>). It is not stored and it is not transmitted. Today’s date is computed locally and is not stored.
           </li>
           <li>
             <strong>License.</strong> If you pay or log in, an installation id, your ExtensionPay account email, and the subscription status (paid, trial, date) are exchanged with extensionpay.com to decide whether Premium is active.
@@ -168,12 +180,12 @@
         </ul>
         <p>
           Not collected: inbox contents, received messages, attachments, browsing history, location, health data, or data used for advertising or credit decisions.
-          The body of the message you are writing is not uploaded. Card payments are entered on ExtensionPay’s site, not in the extension.
+          The body of the message you are writing is not uploaded. A JSON or HTML export you download stays on your device. Card payments are entered on ExtensionPay’s site, not in the extension.
         </p>
 
         <h2>Where data is stored</h2>
         <p>
-          Templates, language, and the local copy of the license stay in the browser’s local storage on this device.
+          Templates, variables, drafts, language, and the local copy of the license stay in the browser’s local storage on this device.
           They are not synced through the Google account. They are not sent to a server we operate. This extension has no server of its own.
         </p>
 
@@ -192,9 +204,9 @@
 
         <h2>Retention and deletion</h2>
         <p>
-          Templates remain until you delete them in the popup, or until you uninstall the extension.
-          Uninstalling the extension removes the templates and the language stored locally.
-          To delete an ExtensionPay account, contact ExtensionPay.
+          Templates, variables, and drafts remain until you delete them in the popup (one by one, or via Privacy → delete all local data), or until you uninstall the extension.
+          Uninstalling the extension removes that local data, including the saved language.
+          Local deletion does not cancel an ExtensionPay subscription. To delete an ExtensionPay account, contact ExtensionPay.
         </p>
 
         <h2>Changes</h2>
